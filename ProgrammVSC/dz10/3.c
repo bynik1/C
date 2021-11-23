@@ -72,6 +72,7 @@ int main()
     printf("%s\n", destination);
     //Зад
     //sdsds
+    //dsdsd
 
     return 0;
 }
