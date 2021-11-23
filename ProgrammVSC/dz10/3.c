@@ -70,6 +70,8 @@ int main()
     char destination[strlen(array1) + 1 + strlen(array2)];
     string_concat_safe(array1, array2, destination);
     printf("%s\n", destination);
+    //Зад
+    //sdsds
 
     return 0;
 }
