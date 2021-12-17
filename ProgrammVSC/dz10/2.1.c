@@ -38,9 +38,7 @@ int main()
     
     //char *buffer = malloc(50);
     char *buffer[strlen(array1) + 1];
-    //printf(" доин %ld\n", strlen(array1) + 1);
-    char *morse;
-    int morse-size;   
+    //printf(" доин %ld\n", strlen(array1) + 1); 
 
 
     //long unsigned int size = malloc_usable_size(buffer);

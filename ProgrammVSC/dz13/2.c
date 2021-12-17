@@ -1,4 +1,4 @@
-   
+#include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #define n 5
@@ -91,9 +91,24 @@ ps sort_score(ps * game2)//Алгоритм подсчётом
 }
 
 
-ps sort_name(ps * game2)//Алгоритм вставками
+ps sort_name(ps * game2)
 {
+    int i, j;
+    ps emp;
 
+    for(i = 0; i < n - 1; i++){
+
+        for(j = i + 1; j < n; j++){
+
+            if(strcmp(game2[i].name, game2[j].name) > 0){
+                emp = game2[i];
+                game2[i] = game2[j];
+                game2[j] = emp;
+            }
+        }
+    }
+
+    return *game2;
 }
 
 
@@ -113,7 +128,7 @@ int main()
     *game = sort_res(game);
     reed(game);
 
-    *game = sort_scor(game);
+    *game = sort_score(game);
     reed(game);
 
     *game = sort_name(game);
@@ -121,58 +136,3 @@ int main()
 
     return 0;
 }
-
-
-// int sort_sname(ps* game) 
-// {
-//     int i, j; 
-//     ps ptr;
-
-//     for (i = 0; i< n- 1; i++){
-//         for(j = 1 + 1; j < n; j++){
-//             if(game[1].army< game[j].army){
-//                 ptr = game[1]; 
-//                 game[1]= game[j];
-//                 game[j] = ptr;
-//             }
-//         }
-//     }
-
-// return game;
-// }
-
-// int sort_sres(ps* game) 
-// {
-//     int i, j; 
-//     ps ptr;
-
-//     for (i = 0; i< n- 1; i++){
-//         for(j = 1 + 1; j < n; j++){
-//             if(game[1].army< game[j].army){
-//                 ptr = game[1]; 
-//                 game[1]= game[j];
-//                 game[j] = ptr;
-//             }
-//         }
-//     }
-
-// return game;
-// }
-
-// int sort_sscor(ps* game) 
-// {
-//     int i, j; 
-//     ps ptr;
-
-//     for (i = 0; i < n- 1; i++){
-//         for(j = 1 + 1; j < n; j++){
-//             if(game[i].army > game[j].army){
-//                 ptr = game[j]; 
-//                 game[i]= game[j];
-//                 game[i] = ptr;
-//             }
-//         }
-//     }
-
-// return game;
-// }

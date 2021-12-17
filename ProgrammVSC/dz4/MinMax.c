@@ -13,7 +13,7 @@ int main(){
     nmax = n;
 
     while(scanf("%f\n", &chiclo) == 1){
-        n ++;
+        n++;
         if (chiclo > max){
             max = chiclo;
             nmax = n;
